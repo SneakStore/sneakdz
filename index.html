@@ -1,4 +1,10 @@
-<style>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits - Boutique de Baskets</title>
+  <style>
     * {
         margin: 0;
         padding: 0;
@@ -164,3 +170,179 @@
         }
     }
 </style>
+
+</head>
+<body>
+    <header>
+        <div class="logo">SneakStore dz</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#">Produits</a></li>
+                <li><a href="#">À Propos</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="cart" onclick="showCart()">
+        🛒 <span id="cart-count">0</span> articles
+    </div>
+    <div id="toast" class="toast">Produit ajouté au panier !</div>
+    <div class="overlay" id="overlay" onclick="hideCart()"></div>
+    <section id="produits">
+        <h2>Nos Meilleures Ventes</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="https://sneakernews.com/wp-content/uploads/2020/08/union-air-jordan-4-guava-DC9533-800-6.jpg?w=1920" alt="Panier 1">
+                <h3>J4 Union Guava Ice</h3>
+                <p>121.940 DA</p>
+                <button class="buy-btn" data-name="J4 Union Guava Ice" data-price="121940">Acheter</button>
+            </div>
+            <div class="product">
+                <img src="https://images.complex.com/complex/image/upload/q_auto,c_fill,ar_1.78,w_1920,f_auto,g_auto/v1723837839/sanity-new/travis-scott-air-jordan-1-low-womens-olive-dz4137-106-pair-134176788.jpg" alt="Basket 2">
+                <h3>Jordan 1 Low Travis Scott Medium Olive</h3>
+                <p>142.740 DA</p>
+                <button class="buy-btn" data-name="Jordan 1 Low Travis Scott Medium Olive" data-price="142740">Acheter</button>
+            </div>
+            <div class="product">
+                <img src="https://www.nicekicks.com/files/2024/03/NOCTA-x-Nike-Hot-Step-2-Total-Orange-DZ7293-800-01.jpg" alt="Basket 3">
+                <h3>Nocta Hot Step 2 Orange</h3>
+                <p>101.140 DA</p>
+                <button class="buy-btn" data-name="Nocta Hot Step 2 Orange" data-price="101140">Acheter</button>
+            </div>
+            <div class="product">
+                <img src="https://sneakernews.com/wp-content/uploads/2024/03/verdy-nike-sb-dunk-visty-ps-FZ7195-400-3.jpg?w=1200" alt="Basket 1">
+                <h3>Dunk Low Verdy Visty</h3>
+                <p>95.940 DA</p>
+                <button class="buy-btn" data-name="Dunk Low Verdy Visty" data-price="95940">Acheter</button>
+            </div>
+            <div class="product">
+                <img src="https://sneakernews.com/wp-content/uploads/2021/04/air-jordan-4-lightning-CT8527-700-release-date-8.jpg?w=1200" alt="Basket 2">
+                <h3>Jordan 4 Lightning</h3>
+                <p>77.740 DA</p>
+                <button class="buy-btn" data-name="Jordan 4 Lightning" data-price="77740">Acheter</button>
+            </div>
+            <div class="product">
+                <img src="https://images.soleretriever.com/blog/0adf2e582b431a7c8d67ca133dc217dbfc29e18f-1070x760.jpg?quality=90&fit=clip&auto=format&width=1200&height=800&width=1200" alt="Basket 3">
+                <h3>Air Force 1 Certified Lover Boy</h3>
+                <p>51.740 DA</p>
+                <button class="buy-btn" data-name="Air Force 1 Certified Lover Boy" data-price="51740">Acheter</button>
+            </div>
+            <div class="product">
+                <img src="https://sneakerbardetroit.com/wp-content/uploads/2021/01/Air-Jordan-6-Carmine-CT8529-106-Release-Date-4.jpg" alt="Basket 1">
+                <h3>Jordan 6 Carmine</h3>
+                <p>51.740 DA</p>
+                <button class="buy-btn" data-name="Jordan 6 Carmine" data-price="51740">Acheter</button>
+            </div>
+            <div class="product">
+                <img src="https://images.complex.com/complex/image/upload/q_auto,c_fill,ar_2.11,w_1920,f_auto,g_auto/v1723857653/sanity-new/sacai-nike-ldwaffle-varsity-blue-del-sol-varsity-red-black-bv0073-400-pair.jpeg-134163091.jpg" alt="Basket 2">
+                <h3>Sacai x Nike LDWaffle Bleu Varsity Del Sol Rouge Varsity Noir</h3>
+                <p>33.540 DA</p>
+                <button class="buy-btn" data-name="Sacai x Nike LDWaffle Bleu Varsity Del Sol Rouge Varsity Noir" data-price="33540">Acheter</button>
+            </div>
+            <div class="product">
+                <img src="https://sneakernews.com/wp-content/uploads/2019/11/Maison-Chateau-Rouge-Air-Jordan-1-Mid-CU2803_200-4.jpg?w=1200" alt="Basket 3">
+                <h3>Jordan 1 Mid Maison Chateau Rouge</h3>
+                <p>64.740 DA</p>
+                <button class="buy-btn" data-name="Jordan 1 Mid Maison Chateau Rouge" data-price="64740">Acheter</button>
+            </div>
+            <div class="product">
+                <img src="https://www.sneakerstyle.fr/wp-content/uploads/2023/06/nike-air-max-plus-tn-university-blue-gradient-FJ4736-400.jpg" alt="Basket 3">
+                <h3>Nike Air Max Plus Celestine Blue</h3>
+                <p>49.199 DA</p>
+                <button class="buy-btn" data-name="Nike Air Max Plus Celestine Blue" data-price="49199">Acheter</button>
+            </div>
+            <div class="product">
+                <img src="https://www.sneakerstyle.fr/wp-content/uploads/2022/03/nike-air-max-plus-tn-triple-white-604133-139.jpg" alt="Basket 3">
+                <h3>Nike Air Max Plus TN Ultra Triple White</h3>
+                <p>31.200 DA</p>
+                <button class="buy-btn" data-name="Nike Air Max Plus TN Ultra Triple White" data-price="31200">Acheter</button>
+            </div>
+            <div class="product">
+                <img src="https://www.sneakerstyle.fr/wp-content/uploads/2023/10/nike-air-max-plus-tn-og-voltage-purple-DX0755-500.jpg" alt="Basket 3">
+                <h3>Nike Air Max Plus TN OG Voltage Purple</h3>
+                <p>44.200 DA</p>
+                <button class="buy-btn" data-name="Nike Air Max Plus TN OG Voltage Purple" data-price="44200">Acheter</button>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        &copy; 2024 SneakStore dz. Tous droits réservés.
+    </footer>
+
+    <div class="cart-list" id="cart-list">
+        <h2>Mon Panier</h2>
+        <div id="cart-items"></div>
+        <div>
+            <strong>Total:</strong> <span id="total-price">0 DA</span>
+        </div>
+        <button onclick="hideCart()">Fermer</button>
+    </div>
+
+    <script>
+        const cart = [];
+        const cartCountElement = document.getElementById("cart-count");
+        const cartListElement = document.getElementById("cart-list");
+        const cartItemsElement = document.getElementById("cart-items");
+        const totalPriceElement = document.getElementById("total-price");
+        const toastElement = document.getElementById("toast");
+        const overlayElement = document.getElementById("overlay");
+
+        // Fonction pour ajouter un produit au panier
+        document.querySelectorAll('.buy-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const productName = button.getAttribute('data-name');
+                const productPrice = parseInt(button.getAttribute('data-price'));
+                addToCart(productName, productPrice);
+                showToast();
+            });
+        });
+
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            updateCart();
+        }
+
+        function updateCart() {
+            cartCountElement.textContent = cart.length;
+            cartItemsElement.innerHTML = "";
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                total += item.price;
+                cartItemsElement.innerHTML += 
+                    <div class="cart-item">
+                        ${item.name} - ${item.price} DA 
+                        <button class="remove-btn" onclick="removeFromCart(${index})">Supprimer</button>
+                    </div>
+                ;
+            });
+            totalPriceElement.textContent = total + " DA";
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function showToast() {
+            toastElement.style.opacity = '1';
+            setTimeout(() => {
+                toastElement.style.opacity = '0';
+            }, 3000);
+        }
+
+        function showCart() {
+            cartListElement.style.display = "block";
+            overlayElement.style.display = "block";
+        }
+
+        function hideCart() {
+            cartListElement.style.display = "none";
+            overlayElement.style.display = "none";
+        }
+    </script>
+</body>
+</html>
+
